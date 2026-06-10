@@ -1,1 +1,1 @@
-# mini-projeto-renderizacao
+# mini-projeto
