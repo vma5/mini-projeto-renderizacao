@@ -18,9 +18,7 @@ O projeto ilustra a coexistência de duas estratégias no mesmo ambiente:
 
 ## 🛠️ Tecnologias Utilizadas
 Para garantir a simplicidade e o foco exclusivo no conceito teórico da renderização hibrida, o projeto foi construído utilizando:
-* **HTML5:** Estruturação dos blocos de simulação.
-* **CSS3:** Estilização e diferenciação visual dos componentes de Servidor e Cliente.
-* **JavaScript (Vanilla):** Simulação da reatividade/manipulação de estado no lado do cliente.
+* **HTML5:** Utilizado exclusivamente para a marcação estrutural do texto, títulos e divisões da página.
 
 ---
 
