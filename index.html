@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Renderização Moderna</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 40px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .bloco-servidor {
+            background-color: #ffffff;
+            border-left: 5px solid #2ecc71;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 3px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .tag-servidor { background-color: #2ecc71; }
+        .tag-cliente { background-color: #0070f3; }
+        
+        .bloco-cliente {
+            background-color: #f0f8ff;
+            border: 2px dashed #0070f3;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #0070f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover { background-color: #0056b3; }
+        span#contador { color: #0070f3; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Simulador de Renderização Híbrida</h1>
+    <p>Este projeto demonstra visualmente como o Next.js divide uma página moderna.</p>
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+
+    <!-- BLOCO DO SERVIDOR -->
+    <div class="bloco-servidor">
+        <span class="tag tag-servidor">SERVER COMPONENT (SSR/SSG)</span>
+        <h2>Conteúdo Estático do Portal</h2>
+        <p>Este texto foi gerado no Servidor. Ele chega pronto e leve para o navegador do usuário, garantindo um carregamento instantâneo e excelente indexação no Google (SEO).</p>
+    </div>
+
+    <!-- BLOCO DO CLIENTE -->
+    <div class="bloco-cliente">
+        <span class="tag tag-cliente">CLIENT COMPONENT (CSR - "use client")</span>
+        <h2>Área Interativa do Usuário</h2>
+        <p>Este bloco simula a interatividade que roda direto no navegador do usuário usando JavaScript.</p>
+        
+        <p>Cliques acumulados no navegador: <span id="contador">0</span></p>
+        <button onclick="interagir()">👍 Clicar/Interagir</button>
+    </div>
+
+    <!-- LÓGICA DO CLIENTE -->
+    <script>
+        let cliques = 0;
+        function interagir() {
+            cliques++;
+            document.getElementById('contador').innerText = cliques;
+        }
+    </script>
+
+</body>
+</html>
